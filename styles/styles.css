@@ -44,11 +44,14 @@ nav a {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    margin-left: 10%;
+    margin-right: 5%;
 }
 
 .flexContent {
     flex: 1;
     min-width: 300px;
+    text-align: center;
 }
 
 /* Jobs Page CSS */
