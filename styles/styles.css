@@ -108,6 +108,14 @@ nav a {
     text-decoration: underline;
 }
 
+aside {
+	width: 25%;
+	float: right;
+	border: 2px solid #333;
+	margin: 15px;
+	padding: 10px;
+}
+
 /* Apply Page CSS */
 
 .formContainer {
@@ -222,7 +230,7 @@ textarea {
 
 .formRow {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
 }
 
 .formRow .form-group {
@@ -272,6 +280,7 @@ footer {
     color: #ecf0f1;
     text-align: center;
     padding: 30px 0;
+    clear: both;
 }
 
 footer p {
@@ -362,6 +371,18 @@ tbody tr {
     .careerItem:nth-child(5) {
         grid-column: 2;
     }
+
+    table {
+        font-size: 0.9em;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    caption {
+        font-size: 1.2em;
+    }
 }
 
 @media (max-width: 480px) {
@@ -389,16 +410,16 @@ tbody tr {
     }
 }
 
-@media (max-width: 768px) {
-    table {
-        font-size: 0.9em;
+@media (max-width: 1440px) {
+    aside {
+        margin: 150px;
     }
-    
-    th, td {
-        padding: 8px 10px;
+
+    nav a {
+        padding: 10px 75px;
     }
-    
-    caption {
-        font-size: 1.2em;
+
+    nav a {
+        padding: 10px 75px;
     }
 }
