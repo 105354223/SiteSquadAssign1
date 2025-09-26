@@ -40,18 +40,17 @@ nav a {
 }
 
 .flexContainer {
-    margin: 20px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin-left: 10%;
-    margin-right: 7%;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .flexContent {
     flex: 1;
     min-width: 300px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Jobs Page CSS */
@@ -421,5 +420,91 @@ tbody tr {
 
     nav a {
         padding: 10px 75px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .headerContainer,
+    .navContainer {
+        padding: 10px 0;
+    }
+    
+    nav ul {
+        padding: 0;
+        text-align: center;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+    
+    nav a {
+        padding: 12px 20px;
+        margin: 2px 0;
+    }
+    
+    .flexContainer {
+        margin: 10px 5%;
+        flex-direction: column;
+    }
+    
+    .flexContent {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    aside {
+        width: 90%;
+        float: none;
+        margin: 20px auto;
+    }
+    
+    .careersGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+    
+    .careerItem {
+        padding: 10px;
+    }
+    
+    .careerItem:nth-child(4),
+    .careerItem:nth-child(5) {
+        grid-column: 1;
+    }
+    
+    .formContainer {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .formRow {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .radioGroup {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    table {
+        font-size: 0.8em;
+    }
+    
+    th, td {
+        padding: 6px 8px;
+    }
+    
+    footer {
+        padding: 20px 0;
+    }
+    
+    footer a {
+        display: block;
+        margin: 5px 0;
+        padding: 10px;
     }
 }
