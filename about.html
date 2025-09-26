@@ -1,38 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A government agency enhancing its IT and digital services">
-    <meta name="author" content="Julien Ambrose, Kashfia Rahman, Tamim Ahmed, Khaled Rafid">
-    <title>About Us</title>
-    <link rel="stylesheet" href="styles/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G06 · About Our Team</title>
+  <style>
+    :root {
+      --bg: #0f1220;
+      --panel: #151934;
+      --text: #e6ecff;
+      --muted: #a7b0d6;
+      --accent: #7c9cff;
+      --accent-2: #36d1dc;
+      --accent-3: #5b86e5;
+      --border: #2a315b;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: radial-gradient(1200px 800px at 80% -10%, #1a1f3f 0%, #0f1220 60%);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      padding: 56px 24px 24px;
+      background: linear-gradient(135deg, rgba(54, 209, 220, 0.12), rgba(91, 134, 229, 0.12));
+      border-bottom: 1px solid var(--border);
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+    .title {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    .badge {
+      padding: 6px 10px; border: 1px solid var(--border);
+      border-radius: 999px; font-size: 12px; color: var(--muted);
+      background: rgba(21, 25, 52, 0.6);
+    }
+    h1 {
+      margin: 0; font-size: 2.2rem; letter-spacing: 0.3px;
+      background: linear-gradient(90deg, var(--accent-2), var(--accent-3));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    p.lead {
+      margin: 12px 0 0; color: var(--muted); max-width: 70ch;
+    }
+    main { padding: 32px 0 64px; }
+
+    
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 860px) {
+      .grid { grid-template-columns: 1.1fr 0.9fr; }
+    }
+    .panel {
+      background: linear-gradient(180deg, rgba(18, 22, 44, 0.7), rgba(18, 22, 44, 0.55));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+    .panel h2 {
+      margin-top: 0; font-size: 1.35rem;
+    }
+    .panel h3 {
+      margin: 20px 0 10px; font-size: 1.05rem; color: var(--muted);
+    }
+
+    
+    ul, ol { padding-left: 20px; }
+    li { margin: 4px 0; }
+    dl { margin: 0; }
+    dt {
+      margin-top: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px;
+    }
+    dt .chip {
+      font-size: 12px; color: var(--muted);
+      padding: 2px 8px; border: 1px solid var(--border); border-radius: 999px;
+    }
+    dd { margin: 0 0 12px 0; color: var(--text); }
+    dd + dd { margin-top: -6px; }
+
+    blockquote {
+      margin: 8px 0; padding: 10px 12px;
+      border-left: 3px solid var(--accent); background: rgba(124, 156, 255, 0.08);
+      border-radius: 8px;
+      color: var(--text);
+    }
+    blockquote footer {
+      margin-top: 6px; color: var(--muted); font-size: 0.92rem;
+    }
+
+    
+    figure {
+      margin: 0; overflow: hidden;
+      border-radius: 12px; border: 1px solid var(--border);
+      background: rgba(21,25,52,0.5);
+    }
+    figure img {
+      display: block; width: 100%; height: auto;
+      aspect-ratio: 16/9; object-fit: cover;
+      filter: saturate(1.05) contrast(0.98);
+    }
+    figcaption {
+      padding: 10px 12px; font-size: 0.95rem; color: var(--muted);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .size-note {
+      font-size: 12px; color: var(--muted); margin-left: auto;
+      border: 1px dashed var(--border); padding: 2px 6px; border-radius: 6px;
+    }
+
+    
+    table {
+      width: 100%; border-collapse: collapse; margin-top: 8px;
+      background: rgba(21,25,52,0.5);
+      border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    }
+    caption {
+      caption-side: top; padding: 8px; color: var(--muted); font-weight: 600;
+    }
+    th, td {
+      padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: rgba(18,22,44,0.6); color: var(--text); font-weight: 600;
+    }
+    tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: rgba(124,156,255,0.06); }
+
+    
+    footer {
+      padding: 18px 24px; border-top: 1px solid var(--border); color: var(--muted);
+      text-align: center; font-size: 0.95rem;
+      background: linear-gradient(135deg, rgba(54, 209, 220, 0.08), rgba(91, 134, 229, 0.08));
+    }
+  </style>
 </head>
-
 <body>
-        <!-- Company Header -->
-    <header class="headerContainer">
-        <img src="images/mainlogo.png" alt="Company Logo" width="300">
-        <!-- Navigation -->
-        <nav class="navContainer">
+  <header>
+    <div class="wrap">
+      <div class="title">
+        <span class="badge">Government digital services · G06</span>
+        <h1>Team Catalyst</h1>
+      </div>
+      <p class="lead">
+        We design human-centered IT experiences for public services—secure, accessible, and delightful. This is who we are.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap grid">
+      
+      <section class="panel" aria-labelledby="class-info">
+        <h2 id="class-info">Class details</h2>
+        <ul>
+          <li><strong>Group name:</strong> Team Catalyst (G06)</li>
+          <li>
+            <strong>Class day/time:</strong>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="jobs.html">Jobs</a></li>
-                <li><a href="apply.html">Apply Now</a></li>
-				<li><a href="about.html">About</a></li>
+              <li><strong>Day:</strong> Thursday</li>
+              <li><strong>Time:</strong> 2:00–4:00 PM AEST</li>
+              <li><strong>Location:</strong> Melbourne (VIC), Australia</li>
             </ul>
-        </nav>
-    </header>
-    <footer>
-        <p>
-            <a href="https://github.com/your-repo" target="_blank">GitHub Repository</a> |
-            <a href="https://jira.your-reposs" target="_blank">Jira Board</a> |
-            <a href="mailto:info@companyname.com">info@companyname.com</a>
-        </p>
-    </footer>
-</body>
+          </li>
+        </ul>
 
-</body>
+        <h3>Group photo</h3>
+        <figure>
+        </figure>
+      </section>
 
+      <section class="panel" aria-labelledby="members">
+        <h2 id="members">Member contributions and quotes</h2>
+        <dl>
+          <dt>Julien Ambrose <span class="chip">Worked on the CSS and Apply page</span></dt>
+          <dd><strong>Contribution:</strong> Led discovery, mapped user journeys, and set accessibility baselines across services.</dd>
+          
+
+          <dt>Kashfia Rahman<span class="chip">Worked on the Index Page</span></dt>
+          <dd><strong>Contribution:</strong> Built the index page consisting navigation bar, company slogan and name.</dd>
+          
+
+          <dt>Tamim Rahman <span class="chip">Cloud & Security</span></dt>
+          <dd><strong>Contribution:</strong> Zero‑trust auth, threat modeling, and cost‑aware infrastructure on government cloud.</dd>
+          
+
+          <dt>Khaled Mostafa Rafid <span class="chip">Worked on the About page</span></dt>
+          <dd><strong>Contribution:</strong> Built the about page consisting brief information on the team and their contribution.</dd>
+          
+        </dl>
+      </section>
+    </div>
+
+    
+    <div class="wrap" style="margin-top: 24px;">
+      <section class="panel" aria-labelledby="facts">
+        <h2 id="facts">Fun facts</h2>
+        <table>
+          <caption>What keeps us curious (and caffeinated)</caption>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Dream job</th>
+              <th>Coding snack</th>
+              <th>Hometown</th>
+              <th>Wildcard hobby</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rafid</td>
+              <td>Real Estate Business</td>
+              <td>Cardamon chai</td>
+              <td>Jashore</td>
+              <td>Singing</td>
+            </tr>
+            <tr>
+              <td>Julien</td>
+              <td>Full Stack Developer</td>
+              <td>Banana</td>
+              <td>Melbourne</td>
+              <td>Sound Engineer and producer</td>
+            </tr>
+            <tr>
+              <td>Kashfia</td>
+              <td>Working in AI related field</td>
+              <td>Coffee</td>
+              <td>Chittagong</td>
+              <td>Cooking and listening to music</td>
+            </tr>
+            <tr>
+              <td>Tamim</td>
+              <td>UX writer for public health</td>
+              <td>Dried mango</td>
+              <td>Dhaka</td>
+              <td>Miniature dioramas</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    Built with care for accessible, trustworthy government services · © Team Catalyst (G06)
+  </footer>
+</body>
 </html>
