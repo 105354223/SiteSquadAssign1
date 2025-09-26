@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,63 +11,54 @@
 
     <!-- Embedded CSS -->
     <style>
-    
-     .side-image {
-    float: right;        
-    width: 250px;          
-    height: auto;         
-    margin-left: 15px;   
-    margin-bottom: 150px;  
-    border-radius: 10px;   
-    }
-</style>
+        .sideImage {
+            float: right;
+            width: 250px;
+            height: auto;
+            margin-left: 15px;
+            margin-bottom: 150px;
+            border-radius: 10px;
+            order: 2;
+        }
+    </style>
 
 
 </head>
 
-<body> 
-     <!-- inline CSS -->
-    <header style="background-image: url('images/Background-img.jpg'); 
-               background-size: cover; 
-               background-position: center; 
-               height: 155px; 
-               color: white; 
-               text-align: center; 
-               padding-top: 60px;">
-               
-    
+<body>
+    <!-- Company Header -->
+    <header class="headerContainer">
+        <img src="images/mainlogo_nobg.png" alt="Company Logo" width="300">
+        <!-- Navigation -->
+        <nav class="navContainer">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="apply.html">Apply Now</a></li>
+ 				<li><a href="about.html">About</a></li>               
+            </ul>
+        </nav>
     </header>
-         
-       <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="jobs.html">Jobs</a></li>
-            <li><a href="apply.html">Apply</a></li>
-            <li><a href="about.html">About Us</a></li>
-            
-        
-        </ul>
-    </nav>
 
-   
-    <main>
-        <section class="slogan-section">
+
+    <main class="flexContainer">
+        <section class="flexContent">
             <h1>Improving Digital Servicing for Everyone</h1>
-            <img src="images/side-img.jpg" alt="Representative image of the website theme" class="side-image">
-        
-            
-            <p>We are committed to serving citizens with integrity,transparency, and efficiency. Explore our website to learn more about career opportunities, services, and our dedicated team.</p>
-            </section>
+            <img src="images/side-img.jpg" alt="Representative image of the website theme" class="sideImage">
+            <p>We are committed to serving citizens with integrity,transparency, and efficiency. Explore our website to
+                learn more about career opportunities, services, and our dedicated team.</p>
+        </section>
     </main>
 
-    
     <footer>
         <p>
-            <a href="https://kashfiarahman.atlassian.net/jira/software/projects/ST/issues/?jql=project+%3D+%22ST%22+ORDER+BY+created+DESC&selectedIssue=ST-1&atlOrigin=eyJpIjoiZTgwN2M4NTBhN2U2NDU3ZThhZjllYjhlMjU5YjVjM2UiLCJwIjoiaiJ9" target="_blank">Jira Board</a> | 
-            <a href="https://github.com/105354223/SiteSquadAssign1.git" target="_blank">GitHub Repository</a> | 
+            <a href="https://kashfiarahman.atlassian.net/jira/software/projects/ST/issues/?jql=project+%3D+%22ST%22+ORDER+BY+created+DESC&selectedIssue=ST-1&atlOrigin=eyJpIjoiZTgwN2M4NTBhN2U2NDU3ZThhZjllYjhlMjU5YjVjM2UiLCJwIjoiaiJ9"
+                target="_blank">Jira Board</a> |
+            <a href="https://github.com/105354223/SiteSquadAssign1.git" target="_blank">GitHub Repository</a> |
             <a href="mailto:info@sitesquad.gov">Email Us</a>
         </p>
     </footer>
 
 </body>
+
 </html>
