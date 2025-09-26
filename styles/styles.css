@@ -35,7 +35,7 @@ nav ul li {
 nav a {
     text-decoration: none;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 100px;
     display: block;
 }
 
@@ -68,6 +68,7 @@ nav a {
 .content {
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 2%;
 }
 
 .careerItem {
@@ -292,6 +293,61 @@ footer a:hover {
     transform: translateY(-2px);
 }
 
+/* about page */
+
+#memberList {
+    list-style: none;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+thead {
+    background: #00167d;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #ddd;
+}
+
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e1e1e1;
+    color: #555;
+}
+
+tbody tr {
+    transition: all 0.3s ease;
+}
+
+.tableContainer {
+    max-width: 1200px;
+    width: 100%;
+}
+
 /* Responsive CSS */
 
 @media (max-width: 768px) {
@@ -313,7 +369,6 @@ footer a:hover {
         grid-column: 1;
     }
 }
-
         
 @media (max-width: 600px) {
     .formRow {
@@ -327,5 +382,19 @@ footer a:hover {
     
     h1 {
         font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9em;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    caption {
+        font-size: 1.2em;
     }
 }
